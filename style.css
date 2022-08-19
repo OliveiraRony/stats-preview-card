@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+    --main-bg: hsl(233, 47%, 7%);
+    --card-bg: hsl(244, 38%, 16%);
+    --accent-bg: hsla(277, 64%, 61%, 0.5);
+    --insight-color: hsl(277, 64%, 61%);
+    --paragraph: hsla(0, 0%, 100%, 0.75);
+    --stats: hsla(0, 0%, 100%, 0.6);
+
+    --primary-font: 'Inter', sans-serif;
+    --secondary-font: 'Lexend Deca', sans-serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg);
+}
+
+main {
+    background-color: var(--card-bg);
+    color: #fff;
+    max-width: 20.4rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.card-img {
+    background-image: url('images/image-header-mobile.jpg');
+    background-size: cover;
+    border-radius: 7px 7px 0px 0px;
+    height: 15rem;
+    position: relative;
+}
+
+.image-overlay {
+    top: 0%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-bg);
+    border-radius: 5px 5px 0px 0px;
+}
+
+.content {
+    padding: 2.3rem 1.7rem;
+}
+
+.content h1 {
+    font-family: var(--primary-font);
+    font-size: 1.7em;
+    font-weight: 700;
+}
+
+.content h1 > span {
+    color: var(--insight-color)
+}
+
+.content > p {
+    color: var(--paragraph);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 1.7em;
+    margin-top: 1rem;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.stats {
+    margin-top: 2.5rem;
+}
+
+.stats p {
+    font-family: var(--primary-font);
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-top: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.stats span {
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+    color:hsla(0, 0%, 100%, 0.75);
+    font-size: 0.8em;
+}
+
+@media screen and (min-width: 768px) {
+    
+    body {
+        margin: auto;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 200rem;
+        text-align: left;
+    }
+
+    .content {
+        width: 50%;
+        padding: 4.5rem 6.5rem 4rem 4.5rem;
+    }
+
+    .content h1 {
+        font-size: 2.2em;
+    }
+
+    .content > p {
+        text-align: left;
+        margin-top: 1.5rem;
+    }
+
+    .card-img {
+        background-image: url('images/image-header-desktop.jpg');
+        width: 50%;
+        height: auto;
+        border-radius: 0px 5px 5px 0px;
+    }
+
+    .image-overlay {
+        border-radius: 0px 5px 5px 0px;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: space-between;
+    }
+}
